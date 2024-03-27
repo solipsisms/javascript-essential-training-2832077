@@ -1,5 +1,6 @@
 const updateBackpack = (update) => {
   let main = document.querySelector("main");
+  // eslint-disable-next-line no-undef
   main.innerHTML = markup(backpack);
   console.info(update);
 };
@@ -25,4 +26,7 @@ const backpack = {
   },
 };
 
+//this entity backpack can be used by any other file as long as imported
 export default backpack;
+
+//however, treating this as a module separates from the browser, can no longer be directly accessed in the same way
